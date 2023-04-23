@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QNA</title>
+    <!-- Make sure your page supports utf-8 characterset. -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Load TensorFlow.js. This is required to use the qna model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+    <!-- Load the qna model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"> </script>
+
+</head>
+
+<body>
+    <h1>QNA</h1>
+
+    <h2>Passage</h2>
+    <textarea id="passage"></textarea>
+    <h2>Question</h2>
+    <textarea id="question"></textarea>
+    <p id="answers"></p>
+    <button onclick="submitQuestion()">Submit</button>
+
+    <style>
+        /* Set font family and size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Style the h1 and h2 headings */
+h1, h2 {
+  color: navy;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Style the labels and textareas */
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  border: 1px solid gray;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+/* Style the answers section */
+#answers {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/* Style the submit button */
+button {
+  background-color: navy;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+    </style>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
